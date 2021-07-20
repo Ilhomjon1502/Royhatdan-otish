@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAFCFF"
+    tools:context=".RegistrationFragment">
+
+    <TextView
+        android:id="@+id/txt_rot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ro‘yxatdan o‘tish"
+        android:textStyle="bold"
+        android:textColor="#303B4F"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/circle_imageview"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_imageview"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+        app:layout_constraintLeft_toLeftOf="@id/image_fon"
+        app:layout_constraintTop_toTopOf="@id/image_fon"
+        app:layout_constraintRight_toRightOf="@id/image_fon"
+        app:layout_constraintBottom_toBottomOf="@id/image_fon"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <ImageView
+        android:id="@+id/image_fon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ellipse"
+        app:layout_constraintBottom_toTopOf="@id/ismfamilya"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_rot"
+        />
+
+    <ImageView
+        android:id="@+id/image_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pluss"
+        app:layout_constraintRight_toRightOf="@id/circle_imageview"
+        app:layout_constraintBottom_toBottomOf="@id/circle_imageview"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ismfamilya"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_fon"
+        app:layout_constraintBottom_toTopOf="@id/tel_nomer">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Ism, Familya"
+            android:paddingLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tel_nomer"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ismfamilya"
+        app:layout_constraintBottom_toTopOf="@id/county">
+
+        <EditText
+            android:id="@+id/edt_tel_number_rg"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Telefon nomer"
+            android:paddingLeft="5dp"
+            android:inputType="phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/county"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel_nomer"
+        app:layout_constraintBottom_toTopOf="@id/manzil">
+
+        <Spinner
+            android:id="@+id/edt_country"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Davlat"
+            android:entries="@array/country"
+            android:paddingLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/manzil"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/county"
+        app:layout_constraintBottom_toTopOf="@id/parol">
+
+        <EditText
+            android:id="@+id/edt_address"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Manzil"
+            android:paddingLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parol"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_registration"
+        app:layout_constraintTop_toBottomOf="@id/manzil">
+
+        <EditText
+            android:id="@+id/edt_password_rg"
+            android:inputType="textPassword"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Parol"
+            android:paddingLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_registration"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#166BFA"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_version_ro"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parol">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ro'yxatdan o'tish"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_version_ro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0"
+        app:layout_constraintTop_toBottomOf="@id/card_registration"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

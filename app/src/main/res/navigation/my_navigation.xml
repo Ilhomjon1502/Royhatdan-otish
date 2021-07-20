@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/tizimgaKirishFragment">
+
+    <fragment
+        android:id="@+id/tizimgaKirishFragment"
+        android:name="com.ilhomjon.h552royhatdanotish.TizimgaKirishFragment"
+        android:label="fragment_tizimga_kirish"
+        tools:layout="@layout/fragment_tizimga_kirish" >
+        <action
+            android:id="@+id/action_tizimgaKirishFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_tizimgaKirishFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.ilhomjon.h552royhatdanotish.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.ilhomjon.h552royhatdanotish.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" />
+</navigation>

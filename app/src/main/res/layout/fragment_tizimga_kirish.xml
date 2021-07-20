@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAFCFF"
+    tools:context=".TizimgaKirishFragment">
+
+    <TextView
+        android:id="@+id/tizmiga_kirish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tizimga kirish"
+        android:textColor="#303B4F"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintBottom_toTopOf="@id/tel_nomer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tel_nomer"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@id/parol"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tizmiga_kirish">
+
+        <EditText
+            android:id="@+id/edt_tel_number"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Telefon raqam"
+            android:paddingLeft="5dp"
+            android:inputType="phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parol"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_registration"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel_nomer">
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:hint="Parol"
+            android:paddingLeft="5dp"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ro'yxatdan o'tish"
+        android:textColor="#71A5FC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_sign"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parol"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_sign"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#166BFA"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_version"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_registration"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tizimga kirish"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0"
+        android:id="@+id/txt_version"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
